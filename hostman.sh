@@ -26,6 +26,5 @@ fi
 if [ $DISABLE -eq 1 ]; then
     echo "Disable $HOST as localhost"
     DOMAIN=`echo "$HOST" | sed 's/\./\\\\./g'`
-    echo "DOMAIN $DOMAIN"
     sed -i ~bak -e "/$DOMAIN/d" /etc/hosts 
 fi
